@@ -44,10 +44,7 @@ st.markdown("""
         background: #eef1f7;
     }
 
-    .stTabs [role="tab"] {
-        font-size=30px;
-        padding: 12px 20px;
-    }
+
     .lensx-box {
         padding: 10px 20px;
         border-left: 6px solid #2563eb;
@@ -180,7 +177,15 @@ with col2:
 # ---------------------------
 
 
-
+st.markdown("""
+    <style>
+    .stTabs [role="tab"] {
+        font-size: 18px;
+        font-weight: 600;
+        padding: 12px 24px;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 
 spam_tab, lang_tab, review_tab, news_tab = st.tabs([
