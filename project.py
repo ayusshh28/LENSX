@@ -44,11 +44,10 @@ st.markdown("""
         background: #eef1f7;
     }
 
-    .stTabs [data-baseweb="tab"] {
-        font-size: 20px !important;
-        font-weight: bold;
+    .stTabs [role="tab"] {
+        font-size=30px;
+        padding: 12px 20px;
     }
-
     .lensx-box {
         padding: 10px 20px;
         border-left: 6px solid #2563eb;
@@ -106,8 +105,12 @@ st.markdown("""
         font-weight: bold;
         font-size: 1.1rem;
     }
+            
+
     </style>
 """, unsafe_allow_html=True)
+
+
 
 
 
@@ -175,6 +178,11 @@ with col2:
 # ---------------------------
 # Tabs layout
 # ---------------------------
+
+
+
+
+
 spam_tab, lang_tab, review_tab, news_tab = st.tabs([
     "🚨 Spam Classifier",
     "🌐 Language Detection",
