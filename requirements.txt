@@ -1,3 +1,4 @@
 joblib
-streamlite-lottie
+imblearn
 pandas
+streamlit_lottie
