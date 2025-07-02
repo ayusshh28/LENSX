@@ -1,0 +1,3 @@
+joblib
+streamlite-lottie
+pandas
