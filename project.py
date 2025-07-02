@@ -109,6 +109,46 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+
+
+# --- Sidebar style ---
+st.markdown("""
+    <style>
+        /* Sidebar width */
+        section[data-testid="stSidebar"] {
+            width: 360px !important;
+            padding: 20px 15px;
+        }
+
+        /* Make sidebar scrollable */
+        section[data-testid="stSidebar"] > div:first-child {
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+
+        /* Increase default sidebar font size */
+        .sidebar-content, .st-emotion-cache-1xw8zd0, .st-emotion-cache-1v0mbdj {
+            font-size: 17px !important;
+        }
+
+        /* Style for expander headers */
+        .stSidebar .st-expanderHeader, .st-expanderHeader {
+            font-size: 18px !important;
+            font-weight: 600;
+        }
+
+        /* Input box styling */
+        .stSidebar .stTextInput input, 
+        .stSidebar .stTextArea textarea {
+            font-size: 16px;
+            padding: 10px;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+
+
+
 # ---------------------------
 # Load assets & models
 # ---------------------------
@@ -149,12 +189,17 @@ with spam_tab:
     if st.button("Classify"):
         prediction = spam_model.predict([msg])
         if prediction[0]==0:
-            st.success("✅ This message is clean and not spam.")
-            st.balloons()
-        else:
+
             st.error("🚫 Spam Alert! This message appears to be spam.")
             st.markdown("### 🧨 Message flagged as SPAM!")
             st.markdown("Be cautious while interacting with this message.")
+          
+        
+        else:
+            st.success("✅ This message is clean and not spam.")
+            st.balloons()
+
+
 
     st.divider()
     uploaded_spam = st.file_uploader("Batch classify messages (CSV/TXT)", type=["csv", "txt"], key="spam_upload")
@@ -224,6 +269,7 @@ with news_tab:
 # ---------------------------
 # Sidebar info
 # ---------------------------
+# --- Sidebar content ---
 st.sidebar.markdown("""
 <div style="text-align: center; padding: 20px 10px;">
   <h3 style="font-weight: 600; font-size: 20px; line-height: 1.6;">
@@ -262,3 +308,5 @@ with st.sidebar.expander("✨ Credits"):
 
 with st.sidebar.expander("📌 Version"):
     st.markdown("**App Version**: 1.0.1\n**Last Updated**: June 30, 2025")
+
+
