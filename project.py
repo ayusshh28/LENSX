@@ -152,7 +152,6 @@ with spam_tab:
             st.success("✅ This message is clean and not spam.")
             st.balloons()
         else:
-
             st.error("🚫 Spam Alert! This message appears to be spam.")
             st.markdown("### 🧨 Message flagged as SPAM!")
             st.markdown("Be cautious while interacting with this message.")
