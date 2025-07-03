@@ -32,6 +32,7 @@ st.set_page_config(
 # Custom CSS
 st.markdown("""
     <style>
+
     :root {
         --violet: #6C63FF;
         --violet-dark: #5248e8;
@@ -42,9 +43,15 @@ st.markdown("""
     html, body {
         font-family: 'Poppins', sans-serif;
         background: #eef1f7;
+            
     }
 
-
+            
+            
+    .stTabs [role="tab"] {
+        font-size=30px;
+        padding: 12px 20px;
+    }
     .lensx-box {
         padding: 10px 20px;
         border-left: 6px solid #2563eb;
@@ -95,7 +102,7 @@ st.markdown("""
         background: #ffffff;
         box-shadow: var(--shadow);
         padding: 1.5rem;
-        border-radius: 0 1rem 1rem 0;
+        
     }
 
     [data-testid="stSidebar"] .st-expanderHeader {
@@ -117,7 +124,7 @@ st.markdown("""
         /* Sidebar width */
         section[data-testid="stSidebar"] {
             width: 360px !important;
-            padding: 20px 15px;
+            
         }
 
         /* Make sidebar scrollable */
@@ -160,7 +167,7 @@ lottie_nlp = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_qp1q7
 # ---------------------------
 col1, col2 = st.columns([2, 3])
 with col1:
-    st_lottie(lottie_nlp, height=140, speed=1)
+    st_lottie(lottie_nlp, height=160, speed=1)
 with col2:
     st.markdown("""
         <div class="lensx-box">
@@ -177,15 +184,7 @@ with col2:
 # ---------------------------
 
 
-st.markdown("""
-    <style>
-    .stTabs [role="tab"] {
-        font-size: 18px;
-        font-weight: 600;
-        padding: 12px 24px;
-    }
-    </style>
-""", unsafe_allow_html=True)
+
 
 
 spam_tab, lang_tab, review_tab, news_tab = st.tabs([
