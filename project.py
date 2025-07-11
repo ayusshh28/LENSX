@@ -5,7 +5,7 @@ from streamlit_lottie import st_lottie
 import requests
 
 spam_model=joblib.load("spam_detect.pkl")
-language_model=joblib.load("lang_detect.pkl")
+language_model=joblib.load("lang_detection.pkl")
 news_model=joblib.load("news_category.pkl")
 review_model=joblib.load("review.pkl")
 
