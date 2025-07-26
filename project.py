@@ -29,6 +29,15 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+
+st.markdown("""
+    <style>
+        /* Change the whole background */
+        .stApp {
+          background: linear-gradient(to bottom right, #F4F9FF, #DFF1FF);
+        }
+    </style>
+""", unsafe_allow_html=True)
 # Custom CSS
 st.markdown("""
     <style>
@@ -42,7 +51,8 @@ st.markdown("""
 
     html, body {
         font-family: 'Poppins', sans-serif;
-        background: #eef1f7;
+            
+        
             
     }
 
@@ -55,7 +65,7 @@ st.markdown("""
     .lensx-box {
         padding: 10px 20px;
         border-left: 6px solid #2563eb;
-        background-color: #f1f5f9;
+        background-color: #ffff;
         border-radius: 10px;
         box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
         margin-bottom:40px;
@@ -76,7 +86,13 @@ st.markdown("""
 
         
     }
-
+    .stTextInput > div > div > input {
+        background-color: #ffff;      /* Light lavender */
+        # color: #333333;                 /* Dark text */
+        border: 1px solid #4682b4;    /* Purple border */
+        border-radius: 8px;
+        padding: 8px;
+    }
     .stButton > button[kind="primary"] {
         background: var(--gradient);
         color: #fff;
@@ -99,7 +115,7 @@ st.markdown("""
     }
 
     [data-testid="stSidebar"] > div:first-child {
-        background: #ffffff;
+        background:linear-gradient(to bottom, #8EC5FC, #E0C3FC);
         box-shadow: var(--shadow);
         padding: 1.5rem;
         
